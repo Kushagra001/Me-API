@@ -54,4 +54,16 @@ This is a personal API playground and portfolio dashboard built with Node.js, Ex
 
 - **Backend**: Express.js server serving REST endpoints.
 - **Database**: SQLite (`database.sqlite`) for persistent storage.
-- **Frontend**: Static HTML/CSS/JS in `public/` directory.
+## Deployment
+
+### Deploy to Render (Recommended)
+
+1.  **Push to GitHub**: Ensure your latest changes are pushed.
+2.  **Create Web Service**: Go to [Render Dashboard](https://dashboard.render.com/) -> New -> Web Service.
+3.  **Connect Repo**: Select your `Me-API` repository.
+4.  **Configure**:
+    *   **Build Command**: `npm install`
+    *   **Start Command**: `node server.js`
+5.  **Deploy**: Click "Create Web Service".
+
+*Note: Since this app uses SQLite, the database is stored in `database.sqlite`. For production persistence beyond deployments on platforms like Heroku/Render (free tier), consider using a persistent volume or migrating to PostgreSQL. However, for this portfolio, the database is committed to the repo, so it will work fine as a read-only source.*
